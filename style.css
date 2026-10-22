@@ -1,0 +1,182 @@
+.en-text{font-family:'Oswald' ,sans-serif ;}
+.en-head{font-family: 'Isometra',sans-serif ;}
+.ru-about{font-family: 'Monomakh',sans-serif ;}
+.ru-text{font-family: 'Russo One',sans-serif;}
+.ru-head{font-family:'Ruslan Display' , sans-serif ;}
+.jn-text{font-family:'M PLUS 1p', sans-serif ;}
+
+/*=======================HEADER==============================*/
+
+header{
+    background-color: #f4c2d7;
+    padding: 20px 2px;
+    box-shadow: 0 2px 3px;
+
+
+}
+
+.header-container{
+    max-width: 1200px;
+    margin: 0px auto;
+    justify-content: space-between;
+    display: flex;
+    align-items:center ;
+    padding: 5px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header-right{
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    font-family: 'Isometra' , sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    color: #0F4C5C;
+
+}
+
+.nav-menu{
+    display: flex;
+    margin:0;
+    gap: 30px;
+}
+
+.nav-menu a {
+    font-family: 'Russo One', sans-serif; /* Задает шрифт Oswald (если его нет, включится стандартный sans-serif) */
+
+    text-decoration: none;
+    font-size: 20px;
+    color: #0F4C5C;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.5s ease;
+}
+
+.nav-menu a:hover{
+
+    color: #fffdf5;
+    transform: translateY(-2px);
+}
+
+.switch-lang{
+    display: flex;
+    gap: 8px;
+    background-color:#0F4C5C;
+    padding: 5px;
+    border-radius: 8px;
+
+}
+
+.lang-button{
+
+    border: none;
+
+    font-family: 'Russo One', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 6px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 2px;
+}
+
+.lang-button:hover {
+    color: #fffdf5;
+}
+
+.lang-button.active {
+    background-color: #FFC2D7;
+    color: #0F4C5C;
+}
+
+/*========================BODY============================*/
+
+body{
+    min-height: 100vh;
+    font-family: 'Oswald' , sans-serif;
+    background-color: #F4C2D7;
+    color: #0F4C5C;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.about-content{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px;
+    border-radius: 16px;
+    
+    background-color:#f4c2d7 ;
+    box-shadow: 0 16px 1px rgba(0, 0, 0, 60% ) , 0 5px 5px  rgba(0, 0, 0, 70% ) ;
+    
+    
+}
+.about-title{
+    font-family: 'Monomakh';
+    font-size: 48px;
+}
+.about-text p{
+    font-family: 'Russo One';
+    
+}
+
+.logo-image{
+    display: flex;
+    max-width : 40%;
+    height: auto;
+    border: 3px solid  ;
+    border-radius: 20px;
+    
+}
+
+/*======================FOOTER===============================*/
+
+footer {
+    background-color: #FFCEE7;
+    padding: 20px 0;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-links {
+    display: flex;
+    padding: 10px;
+    gap: 100px;
+    flex-wrap: nowrap ;
+    font-size: 32px;
+    justify-content: center;
+    color : #0F4C5C;
+    
+}
+
+.social-links a{
+    padding: 10px;
+    font-size: 32px;
+    justify-content: center;
+    text-decoration: none;
+    color : #0F4C5C;
+    border: 3px solid ;
+    border-radius: 5px;
+}
