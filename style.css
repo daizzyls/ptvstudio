@@ -4,15 +4,14 @@
 .ru-text{font-family: 'Russo One',sans-serif;}
 .ru-head{font-family:'Ruslan Display' , sans-serif ;}
 .jn-text{font-family:'M PLUS 1p', sans-serif ;}
+/*===========================================================*/
 
 /*=======================HEADER==============================*/
 
 header{
     background-color: #f4c2d7;
     padding: 20px 2px;
-    box-shadow: 0 2px 3px;
-
-
+    box-shadow: 0 7px 1px rgba(15, 76, 92, 80%);
 }
 
 .header-container{
@@ -27,7 +26,6 @@ header{
 }
 
 .header-right{
-
     display: flex;
     align-items: center;
     gap: 10px;
@@ -38,7 +36,6 @@ header{
     font-size: 25px;
     text-decoration: none;
     color: #0F4C5C;
-
 }
 
 .nav-menu{
@@ -48,8 +45,7 @@ header{
 }
 
 .nav-menu a {
-    font-family: 'Russo One', sans-serif; /* Задает шрифт Oswald (если его нет, включится стандартный sans-serif) */
-
+    font-family: 'Russo One', sans-serif; 
     text-decoration: none;
     font-size: 20px;
     color: #0F4C5C;
@@ -62,7 +58,7 @@ header{
 .nav-menu a:hover{
 
     color: #fffdf5;
-    transform: translateY(-2px);
+    /*transform: translateY(-2px);*/
 }
 
 .switch-lang{
@@ -71,13 +67,10 @@ header{
     background-color:#0F4C5C;
     padding: 5px;
     border-radius: 8px;
-
 }
 
 .lang-button{
-
     border: none;
-
     font-family: 'Russo One', sans-serif;
     font-size: 10px;
     font-weight: 500;
@@ -99,6 +92,7 @@ header{
 
 /*========================BODY============================*/
 
+
 body{
     min-height: 100vh;
     font-family: 'Oswald' , sans-serif;
@@ -107,7 +101,6 @@ body{
     margin: 0;
     padding: 0;
 }
-
 
 .container {
     max-width: 1200px;
@@ -121,19 +114,25 @@ body{
     gap: 20px;
     padding: 40px;
     border-radius: 16px;
-    
     background-color:#f4c2d7 ;
     box-shadow: 0 16px 1px rgba(0, 0, 0, 60% ) , 0 5px 5px  rgba(0, 0, 0, 70% ) ;
-    
     
 }
 .about-title{
     font-family: 'Monomakh';
     font-size: 48px;
+    margin-top: 0;
 }
+
 .about-text p{
-    font-family: 'Russo One';
+    font-family: 'Monomakh';
+    line-height: 1.4;
+    font-size: 21px;
     
+}
+
+.en-phrase{
+    font-family: "Oswald";
 }
 
 .logo-image{
@@ -152,6 +151,7 @@ footer {
     padding: 20px 0;
     margin-top: 60px;
     text-align: center;
+    max-height: 100px;
 }
 
 .footer-container {
@@ -163,7 +163,7 @@ footer {
 .social-links {
     display: flex;
     padding: 10px;
-    gap: 100px;
+    gap: 70px;
     flex-wrap: nowrap ;
     font-size: 32px;
     justify-content: center;
@@ -173,10 +173,18 @@ footer {
 
 .social-links a{
     padding: 10px;
-    font-size: 32px;
+    font-size: 26px;
     justify-content: center;
     text-decoration: none;
     color : #0F4C5C;
     border: 3px solid ;
+    border-color: #0F4C5C;
     border-radius: 5px;
+    transition: all 0.6s ease; 
+}
+
+.footer-container a:hover {
+    background-color: #fffdf5; 
+    border-color: #ffafdf;
+    color: #ffafdf;
 }
