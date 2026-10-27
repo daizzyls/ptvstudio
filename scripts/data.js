@@ -13,10 +13,10 @@
 // description : {ru : "" , en : ""} 
 // }
 
-data = [
+export const data = [
   {
     id: 1,
-    poster : "",
+    poster : "images/PIDORTV.jpg",
     search : 'ptv',
     title : {
       ru: 'Пи**р ТВ',
@@ -45,7 +45,7 @@ data = [
 
   {
     id: 2,
-    poster : "",
+    poster : "images/bluesea.png",
     search: 'grandblue',
     title : {
     ru: "Необъятный океан",
@@ -65,7 +65,7 @@ data = [
 
   {
     id: 3,
-    poster : "",
+    poster : "images/BOGDAN.jpg",
     search: 'bogdan',
     title: {
     ru: "Поиски Боди",

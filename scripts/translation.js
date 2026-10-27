@@ -1,4 +1,4 @@
-const translations = {
+export const translations = {
     ru: {
         nav: { about: "О НАС" },
         meta: { 
