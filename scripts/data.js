@@ -39,7 +39,10 @@ export const data = [
     },
     genre: 'Hentai',
     episodes: "10 / 10",
-    description : "",
+    description: {
+      ru: "Мужская дружба! Предательство! Параллельные вселенные! Межвидовый баскетбол! - все это здесь... ",
+      en: ""
+    },
     mayBeSerchedAss : ["ptv" ,"pidortv" , "pidor tv" , "зшвщк","зшвщк ем","зшвщкем", "пидор" , "пидортв" , "пидор тв"]
   },
 

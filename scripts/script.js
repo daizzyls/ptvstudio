@@ -75,7 +75,7 @@ function create_anime_card(anime) {
       <div class="wanted-card-inner">
           <div class="wanted-header">
               <span class="wanted-text-ru">РАЗЫСКИВАЕТСЯ</span>
-              <span class="wanted-text-en">WANTED</span>
+              
           </div>
 
           <div class="wanted-image-frame">
