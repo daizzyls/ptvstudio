@@ -1,8 +1,7 @@
-// Переменная для хранения текущего языка
-let currentLang = localStorage.getItem('lang') || 'ru';
-
 import { data } from "./data.js"
 import { translations } from "./translation.js";
+
+let currentLang = localStorage.getItem('lang') || 'ru';
 
 function t(key) {
     // Разбиваем ключ по точкам: "meta.year" → ["meta", "year"]
@@ -32,26 +31,26 @@ function getLocalized(obj) {
 }
 
 function isHeading(text) {
-    // Заголовок — это короткий текст (меньше 80 символов)
-    // И он НЕ заканчивается на точку, восклицательный или вопросительный знак
   return text.length < 30;/*&& !/[.!?…]$/.test(text.trim())*/
 }
 
 function detectLanguage(text) {
-    // Проверяем, есть ли в тексте японские символы
-    // \u3040-\u309F — хирагана, \u30A0-\u30FF — катакана, \u4E00-\u9FAF — кандзи
     if (/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF]/.test(text)) {
-        return 'jp-text';
-    }
+        return 'jn';
+  }
 
-    // Проверяем, есть ли в тексте русские буквы (кириллица)
-    // \u0400-\u04FF — диапазон кириллицы в Unicode
     if (/[\u0400-\u04FF]/.test(text)) {
-        return 'ru-text';
+        return 'ru';
     }
 
-    // Если ничего не нашли — считаем, что это английский
-    return 'en-text';
+    return 'en';
+}
+
+function fontClass(text, isHead) {
+    const lang = detectLanguage(text);
+    if (lang === 'ru') return isHead ? 'ru-head' : 'ru-text';
+    if (lang === 'en') return isHead ? 'en-head' : 'en-text';
+    return 'jn-text';
 }
 
 function create_anime_card(anime) {
@@ -60,12 +59,11 @@ function create_anime_card(anime) {
 
   let title = getLocalized(anime.title);
   let description = getLocalized(anime.description);
-  let slogan = getLocalized(anime.slogan);
   let dateOfPubl = getLocalized(anime.dateOfPubl);
   let episodes = getLocalized(anime.episodes);
 
   const titleLang = detectLanguage(title);
-  const titleType = isHeading(title) ? 'heading' : 'text';
+  const titleType = isHeading(title) ? 'head' : 'text';
   const titleClass = `${titleLang}-${titleType}`;
 
   const descLang = detectLanguage(description);
@@ -73,9 +71,9 @@ function create_anime_card(anime) {
 
   anime_card.innerHTML = `
       <div class="wanted-card-inner">
+
           <div class="wanted-header">
-              <span class="wanted-text-ru">РАЗЫСКИВАЕТСЯ</span>
-              
+              <span class="${fontClass(t('wanted'), true)}">${t('wanted')}</span>
           </div>
 
           <div class="wanted-image-frame">
@@ -100,8 +98,8 @@ function create_anime_card(anime) {
           <div class="wanted-footer-stamp">
               PTV STUDIO DEPT.
           </div>
-      </div>
-  `;
+      </div>`;
+
   return anime_card;
 }
 
@@ -117,6 +115,5 @@ function renderAnimeCards() {
 
 // Ждём, пока страница полностью загрузится
 document.addEventListener('DOMContentLoaded', () => {
-    // Запускаем рендер карточек
     renderAnimeCards();
 });

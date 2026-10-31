@@ -229,13 +229,13 @@ body{
     height: 250px;
     object-fit: cover;
     display: block;
-    filter: sepia(30%);
-    transition: filter 0.3s ease;
+    filter: grayscale(100%)  brightness(90%);
+    transition: filter 0.5s ease;
 }
 
 
 .anime-card:hover .wanted-poster-img {
-    filter: sepia(0%);
+    filter: grayscale(0%)  brightness(114%);
 }
 
 .wanted-info {
