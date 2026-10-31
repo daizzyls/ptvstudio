@@ -56,7 +56,7 @@ function fontClass(text, isHead) {
 function create_anime_card(anime) {
   let anime_card = document.createElement('div')
   anime_card.className = "anime-card";
-
+// fgdfg
   let title = getLocalized(anime.title);
   let description = getLocalized(anime.description);
   let dateOfPubl = getLocalized(anime.dateOfPubl);
