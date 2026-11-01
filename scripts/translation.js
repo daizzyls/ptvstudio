@@ -1,7 +1,8 @@
 export const translations = {
     ru: {
         nav: { about: "О НАС" },
-        meta: { 
+    meta: { 
+            description :"",
             year: "Год:", 
             country: "Страна:", 
             genre: "Жанр:", 
@@ -12,7 +13,8 @@ export const translations = {
     },
     en: {
         nav: { about: "ABOUT" },
-        meta: { 
+      meta: { 
+            description :"",
             year: "Year:", 
             country: "Country:", 
             genre: "Genre:", 
