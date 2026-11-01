@@ -1,5 +1,6 @@
 import { data } from "./data.js"
 import { translations } from "./translation.js";
+import { apply_translation , setLanguage , trans , getLocalize} from "./lang.js";
 
 let currentLang = localStorage.getItem('lang') || 'ru';
 
@@ -73,7 +74,7 @@ function create_anime_card(anime) {
       <div class="wanted-card-inner">
 
           <div class="wanted-header">
-              <span class="${fontClass(t('wanted'), true)}">${t('wanted')}</span>
+              <span class="wanted-word ${fontClass(t('wanted'), true)}">${t('wanted')}</span>
           </div>
 
           <div class="wanted-image-frame">
@@ -113,7 +114,9 @@ function renderAnimeCards() {
     });
 }
 
-// Ждём, пока страница полностью загрузится
-document.addEventListener('DOMContentLoaded', () => {
+
+document.addEventListener('DOMContentLoaded', renderAnimeCards);
+window.addEventListener('langchange', (e) => {
+    currentLang = e.detail;   // ← обновляем локальную переменную из события
     renderAnimeCards();
 });

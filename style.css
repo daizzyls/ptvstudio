@@ -17,6 +17,8 @@
 .ru-text{font-family: 'Russo One',sans-serif;}
 .ru-head{font-family:'Ruslan Display' , sans-serif ;}
 .jn-text{font-family:'M PLUS 1p', sans-serif ;}
+.wanted-text-jn { font-family: 'M PLUS 1p', sans-serif; font-size: 28px; color: var(--text-dark); display: block; letter-spacing: 3px; }
+.anime-slogan { font-style: italic; color: #557; margin: 0; font-size: 14px; }
 /*===========================================================*/
 
 /*=======================HEADER==============================*/
@@ -197,22 +199,15 @@ body{
     padding-bottom: 10px;
 }
 
-.wanted-text-ru {
-    font-family: 'Ruslan Display', sans-serif;
-    font-size: 28px;
+.wanted-word {
+    
+    font-size: 40px;
     color: var(--text-dark);
     display: block;
-    letter-spacing: 3px;
-}
-
-.wanted-text-en {
-    font-family: 'Isometra', sans-serif;
-    font-size: 28px;
-    color: var(--text-dark);
-    display: block;
-    letter-spacing: 5px;
+    letter-spacing: 15px;
     margin-top: 5px;
 }
+
 
 /* Рамка для картинки */
 .wanted-image-frame {
