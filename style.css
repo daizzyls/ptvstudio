@@ -76,33 +76,52 @@ header{
     /*transform: translateY(-2px);*/
 }
 
-.switch-lang{
+/* ===== ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ СО СКОЛЬЗЯЩИМ ФОНОМ ===== */
+.switch-lang {
+    position: relative;          /* точка отсчёта для ползунка */
     display: flex;
     gap: 8px;
-    background-color:#0F4C5C;
+    background-color: #0F4C5C;
     padding: 5px;
     border-radius: 8px;
 }
 
-.lang-button{
+/* Сама "пилюля" — ездит под активной кнопкой */
+.lang-slider {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 0;
+    width: 0;                    /* ширину задаст JS */
+    background-color: #FFC2D7;   /* цвет активного фона */
+    border-radius: 5px;
+    pointer-events: none;        /* не перехватывает клики */
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lang-button {
+    position: relative;          /* кнопки ПОВЕХ ползунка */
+    z-index: 1;
     border: none;
+    background: transparent;     /* ❗ убрали собственный фон */
     font-family: 'Russo One', sans-serif;
     font-size: 10px;
     font-weight: 500;
     padding: 6px 6px;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s;
     letter-spacing: 2px;
+    color: #fffdf5;
+    transition: color 0.3s;      /* плавно меняем только цвет текста */
 }
 
 .lang-button:hover {
-    color: #fffdf5;
+    color: #ffffff;
 }
 
 .lang-button.active {
-    background-color: #FFC2D7;
-    color: #0F4C5C;
+    color: #0F4C5C;              /* фон больше не здесь — он у ползунка */
 }
 
 /*========================BODY============================*/
